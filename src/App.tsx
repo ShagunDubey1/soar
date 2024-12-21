@@ -1,8 +1,7 @@
+import React from 'react';
 
-function App() {
-  return (
-    <div>App</div>
-  )
-}
+const App: React.FC = () => {
+  return <div className=" text-red-500">App</div>;
+};
 
-export default App
+export default App;
