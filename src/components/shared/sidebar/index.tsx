@@ -22,28 +22,30 @@ const Sidebar = ({ setIsOpen, isOpen }: SidebarProps) => {
       <div
         className={`flex justify-between p-4   ease-in-out duration-100  ${isOpen ? ' -translate-x-[1500%] ' : 'translate-x-0 '}`}
       >
-        <h2 className="text-2xl font-bold">Soar Task</h2>
+        <h2 className="text-2xl font-bold font-inter">Soar Task</h2>
         {/* <button onClick={toggleSidebar} className="text-2xl">
           &#10005;
         </button> */}
       </div>
 
       <ul
-        className={`mt-8 space-y-4 px-4  ease-in-out duration-100 ${
+        className={`mt-2 space-y-4  ease-in-out duration-100 ${
           isOpen ? ' -translate-x-[1500%] ' : 'translate-x-0 '
         }`}
       >
-        {sidebarItems.map((item) => (
-          <li key={item.path}>
+        {sidebarItems.map((item, index) => (
+          <li className=" flex gap-8 items-center" key={index}>
+            <div className="h-12 bg-primary w-1 rounded-tr-[10px] rounded-br-[10px]"></div>
             <NavLink
               // onClick={() => handleCategoryClick(category.name.toLowerCase())}
               to={item.path}
               className={({ isActive }) =>
-                `block px-4 p-2 rounded-md hover:bg-gray-700 ${
-                  isActive ? 'bg-gray-700' : ''
+                `flex items-center text-[18px] font-medium gap-6 py-4 hover:bg-gray-700 text-white  ${
+                  isActive ? ' text-primary' : ''
                 }`
               }
             >
+              <img src={item.icon} alt={`${item.name} icon`} className=' w-6 h-6'/>
               {item.name}
             </NavLink>
           </li>

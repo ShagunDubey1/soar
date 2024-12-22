@@ -1,11 +1,19 @@
-export const sidebarItems = [
-  { name: 'Dashboard', path: '/' },
-  { name: 'Transactions', path: '/' },
-  { name: 'Accounts', path: '/' },
-  { name: 'Investments', path: '/' },
-  { name: 'Credit Cards', path: '/' },
-  { name: 'Loans', path: '/' },
-  { name: 'Services', path: '/' },
-  { name: 'My Privileges', path: '/' },
-  { name: 'Setting', path: '/' },
+import { CreditCardIcon, EconometricsIcon, GlyphIcon, HomeIcon, InvestmentIcon, LoanIcon, SeriviceIcon, SettingsIcon, UserIcon } from '../assets/icons';
+
+export type SideBarItems = {
+  name: string;
+  path: string;
+  icon?: string;
+};
+
+export const sidebarItems: SideBarItems[] = [
+  { name: 'Dashboard', path: '/', icon: HomeIcon },
+  { name: 'Transactions', path: '/', icon: GlyphIcon },
+  { name: 'Accounts', path: '/', icon: UserIcon },
+  { name: 'Investments', path: '/', icon: InvestmentIcon },
+  { name: 'Credit Cards', path: '/', icon: CreditCardIcon },
+  { name: 'Loans', path: '/', icon: LoanIcon },
+  { name: 'Services', path: '/', icon: SeriviceIcon },
+  { name: 'My Privileges', path: '/', icon: EconometricsIcon },
+  { name: 'Setting', path: '/', icon: SettingsIcon },
 ];
