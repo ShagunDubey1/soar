@@ -1,7 +1,7 @@
-import React from 'react';
+import PublicRoutes from "./routes/routes";
 
-const App: React.FC = () => {
-  return <div className=" text-red-500">App</div>;
-};
+function App() {
+  return <PublicRoutes />;
+}
 
 export default App;
