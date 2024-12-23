@@ -5,7 +5,7 @@ import Logo from './Group.png';
 import HomeIcon from './home.svg';
 import InvestmentIcon from './investment.svg';
 import LoanIcon from './loan.svg';
-import SeriviceIcon from './service.svg';
+import ServiceIcon from './service.svg';
 import SettingsIcon from './settings.svg';
 import UserIcon from './user.svg';
 
@@ -17,7 +17,7 @@ export {
   HomeIcon,
   InvestmentIcon,
   Logo,
-  SeriviceIcon,
-  SettingsIcon,
+  ServiceIcon,
   UserIcon,
+  SettingsIcon,
 };

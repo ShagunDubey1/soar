@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { sidebarItems } from '../../../constants';
+import { HomeIcon, Logo } from '../../../assets/icons';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -11,8 +12,6 @@ const Sidebar = ({ setIsOpen, isOpen }: SidebarProps) => {
     setIsOpen(!isOpen);
   };
 
-  console.log('isOpen');
-
   return (
     <div
       className={`fixed top-0 left-0 h-full bg-white text-black  flex-shrink-0 transition-all ease-in-out duration-500   z-10 ${
@@ -20,33 +19,49 @@ const Sidebar = ({ setIsOpen, isOpen }: SidebarProps) => {
       } md:translate-x-0 `}
     >
       <div
-        className={`flex justify-between p-4   ease-in-out duration-100  ${isOpen ? ' -translate-x-[1500%] ' : 'translate-x-0 '}`}
+        className={`flex justify-between px-10 py-7  ease-in-out duration-100  ${isOpen ? ' -translate-x-[1500%] ' : 'translate-x-0 '}`}
       >
-        <h2 className="text-2xl font-bold font-inter">Soar Task</h2>
+        <h2 className="flex items-center gap-4 text-2xl font-extrabold font-inter">
+          <img src={Logo} alt={'Logo'} className=" w-5 h-7" />
+          Soar Task
+        </h2>
         {/* <button onClick={toggleSidebar} className="text-2xl">
           &#10005;
         </button> */}
       </div>
 
       <ul
-        className={`mt-2 space-y-4  ease-in-out duration-100 ${
+        className={`mt-2 space-y-2  ease-in-out duration-100 ${
           isOpen ? ' -translate-x-[1500%] ' : 'translate-x-0 '
         }`}
       >
         {sidebarItems.map((item, index) => (
-          <li className=" flex gap-8 items-center" key={index}>
-            <div className="h-12 bg-primary w-1 rounded-tr-[10px] rounded-br-[10px]"></div>
+          <li key={index}>
             <NavLink
               // onClick={() => handleCategoryClick(category.name.toLowerCase())}
               to={item.path}
               className={({ isActive }) =>
-                `flex items-center text-[18px] font-medium gap-6 py-4 hover:bg-gray-700 text-white  ${
-                  isActive ? ' text-primary' : ''
+                `flex items-center text-base font-medium gap-6  ${
+                  isActive ? ' text-primary' : ' text-text-grey'
                 }`
               }
             >
-              <img src={item.icon} alt={`${item.name} icon`} className=' w-6 h-6'/>
-              {item.name}
+              {({ isActive }) => (
+                <>
+                  <div
+                    className={`h-12 mr-1 w-1 rounded-tr-[10px] rounded-br-[10px] ${
+                      isActive ? 'bg-primary' : 'bg-transparent'
+                    }`}
+                  ></div>
+
+                  {/* @ts-ignore */}
+                  <item.icon className="w-6 h-6"
+                    style={{ color: isActive ? 'red' : '#232323' }} 
+                  />
+
+                  {item.name}
+                </>
+              )}
             </NavLink>
           </li>
         ))}
