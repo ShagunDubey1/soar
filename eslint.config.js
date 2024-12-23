@@ -17,16 +17,16 @@ export default [
     },
     plugins: {
       '@typescript-eslint': tseslint, // Use TypeScript ESLint plugin
-      react: pluginReact, 
+      react: pluginReact,
     },
     rules: {
-      'react/react-in-jsx-scope': 'off', 
-      '@typescript-eslint/no-unused-vars': 'warn', 
-      'react/jsx-uses-react': 'off', 
-      'react/jsx-uses-vars': 'error', 
+      'react/react-in-jsx-scope': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'react/jsx-uses-react': 'off',
+      'react/jsx-uses-vars': 'error',
     },
   },
-  pluginJs.configs.recommended, 
-  ...tseslint.configs.recommended, 
-  pluginReact.configs.flat.recommended, 
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
+  pluginReact.configs.flat.recommended,
 ];

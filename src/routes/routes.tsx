@@ -1,5 +1,15 @@
 import { Route, Routes } from 'react-router-dom';
-import { Accounts, CreditCards, Dashboard, Investments, Loans, MyPrivileges, Services, Settings, Transactions } from '../pages';
+import {
+  Accounts,
+  CreditCards,
+  Dashboard,
+  Investments,
+  Loans,
+  MyPrivileges,
+  Services,
+  Settings,
+  Transactions,
+} from '../pages';
 import { MainLayout } from '../layouts';
 
 function PublicRoutes() {
