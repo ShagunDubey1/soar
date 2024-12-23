@@ -29,6 +29,7 @@ export const Dashboard = () => {
               cardHolder="Eddy Cusuma"
               validThru="12/22"
               cardNumber="3778000000001234"
+              isLight={true}
             />
           </div>
         </div>

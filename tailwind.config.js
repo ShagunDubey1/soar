@@ -16,6 +16,7 @@ export default {
         success: '#41D4A8',
         text: {
           primary: '#343C6A',
+          secondary: '#718EBF',
           grey: '#B1B1B1',
         },
       },

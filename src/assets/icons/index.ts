@@ -9,6 +9,9 @@ import ServiceIcon from './service.svg';
 import SettingsIcon from './settings.svg';
 import UserIcon from './user.svg';
 import ChipCardIcon from './Chip_Card.svg';
+import MasterCardIcon from './mastercard.svg';
+import MasterCardDarkIcon from './mastercard_dark.svg';
+import ChipCardDarkIcon from './Chip_Card_dark.svg';
 
 export {
   CreditCardIcon,
@@ -22,4 +25,7 @@ export {
   UserIcon,
   SettingsIcon,
   ChipCardIcon,
+  MasterCardIcon,
+  MasterCardDarkIcon,
+  ChipCardDarkIcon,
 };
