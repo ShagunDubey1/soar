@@ -18,12 +18,12 @@ export type SideBarItems = {
 
 export const sidebarItems: SideBarItems[] = [
   { name: 'Dashboard', path: '/', icon: HomeIcon },
-  { name: 'Transactions', path: '/', icon: GlyphIcon },
-  { name: 'Accounts', path: '/', icon: UserIcon },
-  { name: 'Investments', path: '/', icon: InvestmentIcon },
-  { name: 'Credit Cards', path: '/', icon: CreditCardIcon },
-  { name: 'Loans', path: '/', icon: LoanIcon },
-  { name: 'Services', path: '/', icon: ServiceIcon },
-  { name: 'My Privileges', path: '/', icon: EconometricsIcon },
-  { name: 'Setting', path: '/', icon: SettingsIcon },
+  { name: 'Transactions', path: '/transactions', icon: GlyphIcon },
+  { name: 'Accounts', path: '/accounts', icon: UserIcon },
+  { name: 'Investments', path: '/investments', icon: InvestmentIcon },
+  { name: 'Credit Cards', path: '/creditCards', icon: CreditCardIcon },
+  { name: 'Loans', path: '/loans', icon: LoanIcon },
+  { name: 'Services', path: '/services', icon: ServiceIcon },
+  { name: 'My Privileges', path: '/my-privileges', icon: EconometricsIcon },
+  { name: 'Setting', path: '/settings', icon: SettingsIcon },
 ];
