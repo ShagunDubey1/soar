@@ -8,6 +8,7 @@ import LoanIcon from './loan.svg';
 import ServiceIcon from './service.svg';
 import SettingsIcon from './settings.svg';
 import UserIcon from './user.svg';
+import ChipCardIcon from './Chip_Card.svg';
 
 export {
   CreditCardIcon,
@@ -20,4 +21,5 @@ export {
   ServiceIcon,
   UserIcon,
   SettingsIcon,
+  ChipCardIcon,
 };
