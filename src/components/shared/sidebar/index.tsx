@@ -38,28 +38,38 @@ const Sidebar = ({ setIsOpen, isOpen }: SidebarProps) => {
         {sidebarItems.map((item, index) => (
           <li key={index}>
             <NavLink
-              // onClick={() => handleCategoryClick(category.name.toLowerCase())}
               to={item.path}
               className={({ isActive }) =>
-                `flex items-center text-base font-medium gap-6  ${
-                  isActive ? ' text-primary' : ' text-text-grey'
-                }`
+                `flex items-center text-base font-medium gap-6 ease-in-out duration-300 group ${isActive ? 'text-primary' : 'text-text-grey'}`
               }
             >
               {({ isActive }) => (
                 <>
                   <div
-                    className={`h-12 mr-1 w-1 rounded-tr-[10px] rounded-br-[10px] ${
+                    className={`h-12 mr-1 w-1 rounded-tr-[10px] rounded-br-[10px] transition-all ease-in-out duration-300 group-hover:text-primary ${
                       isActive ? 'bg-primary' : 'bg-transparent'
                     }`}
                   ></div>
 
-                  {/* @ts-ignore */}
-                  <item.icon className="w-6 h-6"
-                    style={{ color: isActive ? 'red' : '#232323' }} 
-                  />
+                  <div className="flex items-center gap-3">
+                    {/* Icon with hover effect */}
+                    {/* @ts-ignore */}
+                    <item.icon
+                      // @ts-ignore
+                      className={`w-6 h-6 transition-all ease-in-out duration-300 group-hover:text-primary ${
+                        isActive ? 'text-primary' : 'text-text-grey'
+                      }`}
+                    />
 
-                  {item.name}
+                    {/* Name with hover effect */}
+                    <span
+                      className={`transition-all ease-in-out duration-300 group-hover:text-primary ${
+                        isActive ? 'text-primary' : 'text-text-grey'
+                      }`}
+                    >
+                      {item.name}
+                    </span>
+                  </div>
                 </>
               )}
             </NavLink>
