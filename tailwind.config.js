@@ -14,7 +14,7 @@ export default {
         alert: '#FF4B4A',
         success: '#41D4A8',
         text: {
-          primary: '#718EBF',
+          primary: '#343C6A',
           grey: '#B1B1B1',
         },
       },
