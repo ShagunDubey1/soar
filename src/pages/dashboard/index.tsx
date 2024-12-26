@@ -1,5 +1,6 @@
 import { PageWrapper } from '../../components/base';
 import {
+  BalanceHistoryCard,
   CreditCard,
   QuickTransferCard,
   TransactionCard,
@@ -81,6 +82,7 @@ export const Dashboard = () => {
           <h3 className=" text-base xl:text-lg font-semibold text-text-primary">
             Balance History
           </h3>
+          <BalanceHistoryCard />
         </div>
       </div>
     </PageWrapper>

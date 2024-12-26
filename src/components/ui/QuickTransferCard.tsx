@@ -16,7 +16,7 @@ const QuickTransferCard: React.FC<Props> = ({ users }) => {
   const [selectedUser, setSelectedUser] = useState<number>(0);
 
   return (
-    <div className="p-6 bg-white rounded-3xl ">
+    <div className="p-6 py-7 bg-white rounded-3xl ">
       <div className="flex items-center justify-center gap-7 mb-8">
         {users.map((user, index) => (
           <div
