@@ -42,7 +42,7 @@ const CreditCard: React.FC<CreditCardProps> = ({
           ? 'white'
           : 'linear-gradient(107.38deg, #5B5A6F 2.61%, #000000 101.2%)',
       }}
-      className={`w-[50%] rounded-3xl relative bg-gradient-to-br border border-[#DFEAF2] font-lato ${
+      className={` min-w-[265px] sm:w-full lg:w-[50%] rounded-3xl relative bg-gradient-to-br border border-[#DFEAF2] font-lato ${
         isLight ? 'text-black' : 'text-white'
       }`}
     >

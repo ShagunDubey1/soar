@@ -13,9 +13,9 @@ export const Dashboard = () => {
   return (
     <PageWrapper>
       {/* col-1 */}
-      <div className=" flex w-full justify-between">
+      <div className=" flex w-full justify-between flex-col lg:flex-row">
         {/* cards */}
-        <div className="flex flex-col w-[65%] gap-3">
+        <div className="flex flex-col w-full lg:w-[65%] gap-3">
           <div className=" flex items-center justify-between w-full">
             <h3 className=" text-base xl:text-lg font-semibold text-text-primary">
               My Cards
@@ -25,7 +25,7 @@ export const Dashboard = () => {
             </button>
           </div>
 
-          <div className=" flex items-center justify-between w-full gap-6">
+          <div className=" flex items-center justify-between w-full gap-6 overflow-x-auto ">
             <CreditCard
               balance={5756}
               cardHolder="Eddy Cusuma"
@@ -43,11 +43,11 @@ export const Dashboard = () => {
         </div>
 
         {/* recent transaction */}
-        <div className="flex flex-col w-[32%] gap-3">
+        <div className="flex flex-col w-full lg:w-[32%] gap-3">
           <h3 className=" text-base xl:text-lg font-semibold text-text-primary">
             Recent Transaction
           </h3>
-          <TransactionCard />
+          {/* <TransactionCard /> */}
         </div>
       </div>
 
@@ -58,14 +58,14 @@ export const Dashboard = () => {
           <h3 className=" text-base xl:text-lg font-semibold text-text-primary">
             Weekly Activity
           </h3>
-          <WeeklyTransactionsChart />
+          {/* <WeeklyTransactionsChart /> */}
         </div>
         {/* expense */}
         <div className="flex flex-col w-[32%] gap-3">
           <h3 className=" text-base xl:text-lg font-semibold text-text-primary">
             Expense Statistics
           </h3>
-          <ExpenceChart />
+          {/* <ExpenceChart /> */}
         </div>
       </div>
       {/* col-3 */}
@@ -75,14 +75,14 @@ export const Dashboard = () => {
           <h3 className=" text-base xl:text-lg font-semibold text-text-primary">
             Quick Transfer
           </h3>
-          <QuickTransferCard users={users} />
+          {/* <QuickTransferCard users={users} /> */}
         </div>
         {/* balance history */}
         <div className="flex flex-col w-[55%] gap-3">
           <h3 className=" text-base xl:text-lg font-semibold text-text-primary">
             Balance History
           </h3>
-          <BalanceHistoryCard />
+          {/* <BalanceHistoryCard /> */}
         </div>
       </div>
     </PageWrapper>
