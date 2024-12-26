@@ -22,12 +22,12 @@ const ExpenceChart = () => {
   };
 
   return (
-    <div className=" rounded-3xl bg-white overflow-hidden">
+    <div className=" rounded-3xl bg-white overflow-hidden flex justify-center items-center">
       <Chart
         chartType="PieChart"
         data={data}
         options={options}
-        width="100%"
+        width="320px"
         height="320px"
         className=" rounded-3xl"
       />

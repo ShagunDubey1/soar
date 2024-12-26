@@ -58,7 +58,7 @@ export const TransactionItem: React.FC<TransactionItemProps> = ({
       <div className="flex items-center gap-4">
         <TransactionIcon type={transaction.type} />
         <div>
-          <h3 className="text-[0.9rem] font-medium font-lato text-text-primary">
+          <h3 className="text-[0.9rem] font-medium font-lato text-text-primary truncate">
             {transaction.title}
           </h3>
           <p className=" text-sm text-text-secondary">{transaction.date}</p>

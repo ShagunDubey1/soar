@@ -1,4 +1,5 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import {
   BarChart,
   Bar,
@@ -16,6 +17,8 @@ interface DayData {
 }
 
 const WeeklyTransactionsChart: React.FC = () => {
+  const isMobile = useMediaQuery({ maxWidth: 550 });
+
   const data: DayData[] = [
     { day: 'Sat', deposit: 220, withdraw: 450 },
     { day: 'Sun', deposit: 120, withdraw: 350 },
@@ -32,12 +35,18 @@ const WeeklyTransactionsChart: React.FC = () => {
         <BarChart
           className=" relative"
           data={data}
-          margin={{
-            top: 20,
-            right: 50,
-            left: 20,
-            bottom: 5,
-          }}
+          margin={
+            isMobile
+              ? {
+                  right: 25,
+                }
+              : {
+                  top: 20,
+                  right: 50,
+                  left: 20,
+                  bottom: 5,
+                }
+          }
           barGap={10}
         >
           <CartesianGrid

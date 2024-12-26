@@ -1,3 +1,4 @@
+import { useMediaQuery } from 'react-responsive';
 import {
   AreaChart,
   Area,
@@ -19,14 +20,20 @@ const data = [
 ];
 
 const BalanceHistoryCard = () => {
+  const isMobile = useMediaQuery({ maxWidth: 550 });
+
   return (
-    <div className="w-full p-6 h-[15.5rem] bg-white rounded-xl overflow-hidden">
+    <div className="w-full py-3 sm:p-6 h-[15.5rem] bg-white rounded-xl overflow-hidden">
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart
           width={500}
           height={200}
           data={data}
-          margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+          margin={
+            isMobile
+              ? { right: 10, left: -26 }
+              : { top: 10, right: 30, left: 0, bottom: 0 }
+          }
         >
           <defs>
             <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
