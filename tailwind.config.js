@@ -20,6 +20,9 @@ export default {
           grey: '#B1B1B1',
         },
       },
+      boxShadow: {
+        custom: '4px 4px 18px -2px rgba(231, 228, 232, 0.8)',
+      },
     },
   },
   plugins: [],

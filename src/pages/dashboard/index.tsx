@@ -1,7 +1,12 @@
 import { PageWrapper } from '../../components/base';
-import { CreditCard, TransactionItem, WeeklyTransactionsChart } from '../../components/ui';
+import {
+  CreditCard,
+  QuickTransferCard,
+  TransactionCard,
+  WeeklyTransactionsChart,
+} from '../../components/ui';
 import ExpenceChart from '../../components/ui/ExpenceChart';
-import { transactions } from '../../data';
+import { users } from '../../data';
 
 export const Dashboard = () => {
   return (
@@ -35,21 +40,13 @@ export const Dashboard = () => {
             />
           </div>
         </div>
+
         {/* recent transaction */}
         <div className="flex flex-col w-[32%] gap-3">
           <h3 className=" text-base xl:text-lg font-semibold text-text-primary">
             Recent Transaction
           </h3>
-          <div className="w-full rounded-3xl relative bg-white p-6">
-            <div className="space-y-3">
-              {transactions.map((transaction) => (
-                <TransactionItem
-                  key={transaction.id}
-                  transaction={transaction}
-                />
-              ))}
-            </div>
-          </div>
+          <TransactionCard />
         </div>
       </div>
 
@@ -73,13 +70,14 @@ export const Dashboard = () => {
       {/* col-3 */}
       <div className=" flex items-center w-full justify-between">
         {/* quick transfer */}
-        <div className="flex flex-col w-[65%] gap-3">
+        <div className="flex flex-col w-[42%]  gap-3">
           <h3 className=" text-base xl:text-lg font-semibold text-text-primary">
             Quick Transfer
           </h3>
+          <QuickTransferCard users={users} />
         </div>
         {/* balance history */}
-        <div className="flex flex-col w-[32%] gap-3">
+        <div className="flex flex-col w-[55%] gap-3">
           <h3 className=" text-base xl:text-lg font-semibold text-text-primary">
             Balance History
           </h3>

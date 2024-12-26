@@ -1,13 +1,15 @@
 import { SideBarItem } from './SideBarItem';
 import SearchBar from './SearchBar';
 import CreditCard from './CreditCard';
-import { TransactionItem } from './TransactionItem';
 import WeeklyTransactionsChart from './WeeklyTransactionChart';
+import TransactionCard from './TransactionCard';
+import QuickTransferCard from './QuickTransferCard';
 
 export {
   SideBarItem,
   SearchBar,
   CreditCard,
-  TransactionItem,
   WeeklyTransactionsChart,
+  TransactionCard,
+  QuickTransferCard,
 };
