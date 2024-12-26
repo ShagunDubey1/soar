@@ -9,8 +9,8 @@ export const MainLayout = () => {
     <div className=" w-full h-full relative flex  min-h-screen  bg-gray-100 ">
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className={`flex flex-1 flex-col overflow-hidden`}>
-        <Header />
-        <Outlet />
+        <Header isOpen={isOpen} setIsOpen={setIsOpen} />
+        {/* <Outlet /> */}
       </div>
     </div>
   );
