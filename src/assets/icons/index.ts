@@ -12,6 +12,9 @@ import ChipCardIcon from './Chip_Card.svg';
 import MasterCardIcon from './mastercard.svg';
 import MasterCardDarkIcon from './mastercard_dark.svg';
 import ChipCardDarkIcon from './Chip_Card_dark.svg';
+import DepositeIcon from "./deposite.png";
+import DollarSign from "./dollar.png";
+import PaypalIcon from "./paypal.png";
 
 export {
   CreditCardIcon,
@@ -28,4 +31,7 @@ export {
   MasterCardIcon,
   MasterCardDarkIcon,
   ChipCardDarkIcon,
+  DepositeIcon,
+  DollarSign,
+  PaypalIcon,
 };

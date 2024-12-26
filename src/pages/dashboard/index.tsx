@@ -1,12 +1,13 @@
 import { PageWrapper } from '../../components/base';
-import { CreditCard, TransactionItem } from '../../components/ui';
+import { CreditCard, TransactionItem, WeeklyTransactionsChart } from '../../components/ui';
+import ExpenceChart from '../../components/ui/ExpenceChart';
 import { transactions } from '../../data';
 
 export const Dashboard = () => {
   return (
     <PageWrapper>
       {/* col-1 */}
-      <div className=" flex items-center w-full justify-between">
+      <div className=" flex w-full justify-between">
         {/* cards */}
         <div className="flex flex-col w-[65%] gap-3">
           <div className=" flex items-center justify-between w-full">
@@ -59,12 +60,14 @@ export const Dashboard = () => {
           <h3 className=" text-base xl:text-lg font-semibold text-text-primary">
             Weekly Activity
           </h3>
+          <WeeklyTransactionsChart />
         </div>
         {/* expense */}
         <div className="flex flex-col w-[32%] gap-3">
           <h3 className=" text-base xl:text-lg font-semibold text-text-primary">
             Expense Statistics
           </h3>
+          <ExpenceChart />
         </div>
       </div>
       {/* col-3 */}

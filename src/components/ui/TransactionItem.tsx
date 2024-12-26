@@ -1,5 +1,6 @@
+import { DepositeIcon, DollarSign, PaypalIcon } from '../../assets/icons';
 import { Transaction } from '../../data';
-import { CreditCard, DollarSign, HandCoins } from 'lucide-react';
+import { CreditCard, DollarSignIcon, HandCoins } from 'lucide-react';
 
 interface TransactionItemProps {
   transaction: Transaction;
@@ -12,19 +13,31 @@ const TransactionIcon: React.FC<{ type: Transaction['type'] }> = ({ type }) => {
     case 'card':
       return (
         <div className={`${baseClasses} bg-yellow-50 `}>
-          <CreditCard className={`${iconClasses} text-yellow-500`} />
+          <img
+            src={DepositeIcon}
+            alt="deposite card"
+            className={`${iconClasses} text-yellow-500`}
+          />
         </div>
       );
     case 'paypal':
       return (
         <div className={`${baseClasses} bg-blue-50`}>
-          <HandCoins className={`${iconClasses} text-blue-500`} />
+          <img
+            src={PaypalIcon}
+            alt="paypal icon"
+            className={`${iconClasses} text-blue-500`}
+          />
         </div>
       );
     case 'transfer':
       return (
         <div className={`${baseClasses} bg-cyan-50`}>
-          <DollarSign className={`${iconClasses} text-cyan-500`} />
+          <img
+            src={DollarSign}
+            alt="paypal icon"
+            className={`${iconClasses} text-cyan-500`}
+          />
         </div>
       );
   }
