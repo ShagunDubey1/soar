@@ -14,7 +14,7 @@ const Sidebar = ({ setIsOpen, isOpen }: SidebarProps) => {
 
   return (
     <div
-      className={` min-h-screen h-full bg-white text-black  flex-shrink-0 transition-all ease-in-out duration-500 z-10 border-r border-["#E6EFF5"] ${
+      className={`  bg-white text-black  flex-shrink-0 transition-all ease-in-out duration-500 z-10 border-r border-["#E6EFF5"] ${
         isOpen
           ? ' -translate-x-full w-0 '
           : 'translate-x-0 md:w-52 xl:w-60 w-72'

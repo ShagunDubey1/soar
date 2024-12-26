@@ -1,6 +1,5 @@
 import { DepositeIcon, DollarSign, PaypalIcon } from '../../assets/icons';
 import { Transaction } from '../../data';
-import { CreditCard, DollarSignIcon, HandCoins } from 'lucide-react';
 
 interface TransactionItemProps {
   transaction: Transaction;
