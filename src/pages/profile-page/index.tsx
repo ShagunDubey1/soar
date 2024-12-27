@@ -64,7 +64,7 @@ export const ProfilePage = () => {
               alt="Profile"
               className="rounded-full w-full h-full object-cover"
             />
-            <button className="absolute bottom-0 right-0 bg-primary p-2 rounded-full text-white hover:bg-gray-600 transition-colors ease-in-out duration-300">
+            <button className="absolute bottom-0 right-0 bg-primary p-2 rounded-full text-white hover:bg-gray-600 transition-colors ease-in-out duration-300 active:ring-1 active:ring-primary">
               <Pencil size={15} />
             </button>
           </div>
@@ -139,7 +139,7 @@ export const ProfilePage = () => {
           <div className="mt-6 flex justify-end">
             <button
               type="submit"
-              className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors duration-300"
+              className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-600 transition-colors duration-300 active:ring-1 active:ring-primary"
             >
               Save
             </button>

@@ -12,9 +12,9 @@ const Settings = () => {
 
   return (
     <PageWrapper>
-      <div className=" w-full  p-6  bg-white rounded-3xl shadow-sm">
+      <div className=" w-full xs:px-4 p-6  bg-white rounded-3xl shadow-sm border border-gray-200">
         <div className="border-b mb-10">
-          <div className="flex space-x-6">
+          <div className="flex xs:space-x-4 space-x-5 sm:space-x-6">
             <SettingTab
               label="Edit Profile"
               active={activeTab === 'profile'}
