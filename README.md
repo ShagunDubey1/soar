@@ -53,12 +53,9 @@ Soar is a responsive and interactive finance management dashboard designed to he
 ## Screenshot
 
 ![App Screenshot](./public/screen-xl.png)
-![App Screenshot](./public/screen-sm.png)
-![App Screenshot](./public/screen-md.png)
 
 ![App Screenshot](./public/screen2-xl.png)
-![App Screenshot](./public/screen2-sm.png)
-![App Screenshot](./public/screen2-md.png)
+
 
 ## App Recording
 
