@@ -12,7 +12,7 @@ const Settings = () => {
 
   return (
     <PageWrapper>
-      <div className=" w-full xs:px-4 p-6  bg-white rounded-3xl shadow-sm border border-gray-200">
+      <div className=" w-full xs:px-4 p-6 px-10 lg:px-14 bg-white rounded-3xl  border border-gray-200 md:border-none md:mt-6 lg:mt-0">
         <div className="border-b mb-10">
           <div className="flex xs:space-x-4 space-x-5 sm:space-x-6">
             <SettingTab

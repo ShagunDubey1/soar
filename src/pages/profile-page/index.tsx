@@ -52,13 +52,13 @@ export const ProfilePage = () => {
     console.log('Updated Profile:', data);
   };
 
-  if (isLoading) return <div className=' min-h-screen '>Loading...</div>;
+  if (isLoading) return <div className=" min-h-screen ">Loading...</div>;
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="md:col-span-1">
-          <div className="relative w-[5.5rem] h-[5.5rem] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div className=" col-span-5 lg:col-span-1 justify-items-center md:justify-items-start">
+          <div className="relative w-[5.5rem] h-[5.5rem] ">
             <img
               src={ProfileImg}
               alt="Profile"
@@ -70,8 +70,8 @@ export const ProfilePage = () => {
           </div>
         </div>
 
-        <div className="md:col-span-2">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="col-span-5 lg:col-span-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <InputField
               label="Your Name"
               field="name"

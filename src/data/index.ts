@@ -31,10 +31,41 @@ export const transactions: Transaction[] = [
     date: '21 January 2021',
     amount: 5400,
   },
+  {
+    id: '4',
+    type: 'transfer',
+    title: 'Jemi Wilson',
+    date: '21 January 2021',
+    amount: 5400,
+  },
 ];
 
 export const users: User[] = [
   { name: 'Livia Bator', role: 'CEO', image: Img1 },
   { name: 'Randy Press', role: 'Director', image: Img2 },
   { name: 'Workman', role: 'Designer', image: Img3 },
+];
+
+export const mockCards = [
+  {
+    balance: 5756,
+    cardHolder: 'Eddy Cusuma',
+    validThru: '12/22',
+    cardNumber: '3778000000001234',
+    isLight: false,
+  },
+  {
+    balance: 2499,
+    cardHolder: 'Sophia Lee',
+    validThru: '03/25',
+    cardNumber: '3782000000005678',
+    isLight: true,
+  },
+  // {
+  //   balance: 15400,
+  //   cardHolder: 'John Doe',
+  //   validThru: '08/24',
+  //   cardNumber: '3778000000009876',
+  //   isLight: false,
+  // },
 ];

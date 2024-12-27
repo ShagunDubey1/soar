@@ -58,9 +58,9 @@ const QuickTransferCard: React.FC<Props> = ({ users }) => {
             onChange={(e) => setAmount(e.target.value)}
             className="w-full  py-3 xs:pl-4 pl-7 mt-2 bg-[#EDF1F7] rounded-full text-text-secondary placeholder:text-sm text-sm placeholder:text-text-secondary xs:text-xs"
           />
-          <button className=" absolute bottom-0 right-0 ml-4 px-6 py-3 bg-black text-white rounded-full flex items-center text-sm gap-1 font-medium group xs:text-xs">
+          <button className=" absolute bottom-0 right-0 ml-4 px-6 py-3 bg-black text-white rounded-full flex items-center text-sm gap-1 font-medium group xs:text-xs active:ring-1 active:ring-primary">
             Send
-            <Send className=" text-white xs:w-4 xs:h-4 w-5 h-5 group-hover:rotate-45 ease-in-out transition duration-300 " />
+            <Send className=" text-white xs:w-4 xs:h-4 w-5 h-5 group-hover:rotate-45 ease-in-out transition duration-300  " />
           </button>
         </div>
       </div>

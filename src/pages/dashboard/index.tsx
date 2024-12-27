@@ -3,7 +3,7 @@ import { PageWrapper } from '../../components/base';
 import { Suspense, lazy } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-import { users } from '../../data';
+import { mockCards, users } from '../../data';
 
 const BalanceHistoryCard = lazy(
   () => import('../../components/ui/BalanceHistoryCard')
@@ -32,50 +32,35 @@ export const Dashboard = () => {
               My Cards
             </h3>
             <Link to={'/creditCards'}>
-              <button className="text-sm xl:text-base font-semibold text-text-primary">
+              <button className="text-sm xl:text-base font-semibold text-text-primary  active:font-bold">
                 See All
               </button>
             </Link>
           </div>
 
-          <div className="flex items-center justify-between w-full gap-6 overflow-x-auto">
-            <Suspense
-              fallback={
-                <Skeleton
-                  height={200}
-                  borderRadius={24}
-                  baseColor="#e9ecef"
-                  highlightColor="#adb5bd"
-                  width={300}
+          <div className="flex items-center justify-between w-full gap-6 overflow-x-auto scrollbar-hide">
+            {mockCards.map((card, index) => (
+              <Suspense
+                key={index}
+                fallback={
+                  <Skeleton
+                    height={200}
+                    borderRadius={24}
+                    baseColor="#e9ecef"
+                    highlightColor="#adb5bd"
+                    width={300}
+                  />
+                }
+              >
+                <CreditCard
+                  balance={card.balance}
+                  cardHolder={card.cardHolder}
+                  validThru={card.validThru}
+                  cardNumber={card.cardNumber}
+                  isLight={card.isLight}
                 />
-              }
-            >
-              <CreditCard
-                balance={5756}
-                cardHolder="Eddy Cusuma"
-                validThru="12/22"
-                cardNumber="3778000000001234"
-              />
-            </Suspense>
-            <Suspense
-              fallback={
-                <Skeleton
-                  height={200}
-                  borderRadius={24}
-                  baseColor="#e9ecef"
-                  highlightColor="#adb5bd"
-                  width={300}
-                />
-              }
-            >
-              <CreditCard
-                balance={5756}
-                cardHolder="Eddy Cusuma"
-                validThru="12/22"
-                cardNumber="3778000000001234"
-                isLight={true}
-              />
-            </Suspense>
+              </Suspense>
+            ))}
           </div>
         </div>
 
