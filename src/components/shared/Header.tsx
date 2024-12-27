@@ -16,7 +16,10 @@ export const Header = ({ setIsOpen, isOpen }: HeaderProps) => {
   return (
     <header className="bg-white flex flex-col md:flex-row items-center justify-between py-4 xl:py-7 xs:px-6 px-9 md:border-b md:border-['#E6EFF5'] ">
       <div className=" w-full flex items-center justify-between ">
-        <Menu onClick={toggleSidebar} className=" inline-block md:hidden w-9 h-9 text-text-primary mt-1" />
+        <Menu
+          onClick={toggleSidebar}
+          className=" inline-block md:hidden w-9 h-9 text-text-primary mt-1"
+        />
         <div>
           <h2 className=" font-semibold text-text-primary text-xl">Overview</h2>
         </div>

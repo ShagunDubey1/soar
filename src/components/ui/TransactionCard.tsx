@@ -1,5 +1,5 @@
-import { transactions } from "../../data";
-import { TransactionItem } from "./TransactionItem";
+import { transactions } from '../../data';
+import { TransactionItem } from './TransactionItem';
 
 function TransactionCard() {
   return (

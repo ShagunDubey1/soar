@@ -17,7 +17,7 @@ const ExpenceChart = () => {
       0: { offset: 0.11 },
     },
     colors: ['#FC7900', '#232323', '#396AFF', '#343C6A'],
-    legend: "none",
+    legend: 'none',
     pieSliceText: 'label',
   };
 
