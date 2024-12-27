@@ -6,7 +6,7 @@ import { CreditCards } from './credit-cards';
 import { Loans } from './loans';
 import { Services } from './services';
 import { MyPrivileges } from './my-privileges';
-import { Settings } from './settings';
+import Settings from './settings';
 
 export {
   Dashboard as Dashboard,

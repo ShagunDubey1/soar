@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { PageWrapper } from '../../components/base';
 import {
   BalanceHistoryCard,
@@ -20,9 +21,11 @@ export const Dashboard = () => {
             <h3 className=" text-base xl:text-lg font-semibold text-text-primary">
               My Cards
             </h3>
-            <button className=" text-sm xl:text-base font-semibold text-text-primary">
-              See All
-            </button>
+            <Link to={'/creditCards'}>
+              <button className=" text-sm xl:text-base font-semibold text-text-primary">
+                See All
+              </button>
+            </Link>
           </div>
 
           <div className=" flex items-center justify-between w-full gap-6 overflow-x-auto ">

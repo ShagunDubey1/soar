@@ -5,6 +5,7 @@ import WeeklyTransactionsChart from './WeeklyTransactionChart';
 import TransactionCard from './TransactionCard';
 import QuickTransferCard from './QuickTransferCard';
 import BalanceHistoryCard from './BalanceHistoryCard';
+import { SettingTab } from './SettingTab';
 
 export {
   SideBarItem,
@@ -14,4 +15,5 @@ export {
   TransactionCard,
   QuickTransferCard,
   BalanceHistoryCard,
+  SettingTab,
 };
