@@ -6,8 +6,11 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { ProfileFormSchema } from '../../schema/profile.schema';
 import { useEffect, useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import { SuccessConfig } from '../../config/notifyConfig';
 
 export const ProfilePage = () => {
+  const notify = (msg: string) => toast.success(msg, SuccessConfig);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const {
     register,
@@ -50,6 +53,7 @@ export const ProfilePage = () => {
 
   const onSubmit = async (data: ProfileData) => {
     console.log('Updated Profile:', data);
+    notify("User Profile updated!")
   };
 
   if (isLoading) return <div className=" min-h-screen ">Loading...</div>;
@@ -146,6 +150,7 @@ export const ProfilePage = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </form>
   );
 };

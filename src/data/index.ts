@@ -48,6 +48,7 @@ export const users: User[] = [
 
 export const mockCards = [
   {
+    id: 1,
     balance: 5756,
     cardHolder: 'Eddy Cusuma',
     validThru: '12/22',
@@ -55,17 +56,19 @@ export const mockCards = [
     isLight: false,
   },
   {
+    id: 2,
     balance: 2499,
     cardHolder: 'Sophia Lee',
     validThru: '03/25',
     cardNumber: '3782000000005678',
     isLight: true,
   },
-  // {
-  //   balance: 15400,
-  //   cardHolder: 'John Doe',
-  //   validThru: '08/24',
-  //   cardNumber: '3778000000009876',
-  //   isLight: false,
-  // },
+  {
+    id: 3,
+    balance: 15400,
+    cardHolder: 'John Doe',
+    validThru: '08/24',
+    cardNumber: '3778000000009876',
+    isLight: false,
+  },
 ];
